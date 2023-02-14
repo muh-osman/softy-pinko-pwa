@@ -4,16 +4,16 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
+    <meta name="theme-color" content="#a162dc"/>
+    <link rel="apple-touch-icon" href="assets/images/icons/192.png">
+    <link rel="manifest" href="manifest.json">
+
     <title>Softy Pinko - Bootstrap 4.0 Theme</title>
-<!--
-SOFTY PINKO
-https://templatemo.com/tm-535-softy-pinko
--->
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -641,6 +641,21 @@ https://templatemo.com/tm-535-softy-pinko
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
+
+    <!-- Conect Server Worker to index.html -->
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+              .then(function(registration) {
+                console.log('Service worker registered: ', registration.scope);
+              })
+              .catch(function(error) {
+                console.log('Service worker registration failed: ', error);
+              });
+          });
+        }
+      </script>
 
   </body>
 </html>
