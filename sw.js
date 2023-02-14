@@ -4,9 +4,9 @@ const cacheName = "pwa-cache-v1";
 // Set up a list of files to be cached
 const filesToCache = [
     "/",
-    "index.html",
-    "assets/css/templatemo-softy-pinko.css",
-    "assets/images/logo.png"
+    "/index.html",
+    "/assets/css/templatemo-softy-pinko.css",
+    "/assets/images/logo.png"
 ];
 
 // When the service worker is installed, cache all the files
